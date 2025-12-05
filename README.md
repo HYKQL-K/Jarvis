@@ -22,7 +22,7 @@
 ## 架构图
 
 ```mermaid
-graph TD
+flowchart TD
   ui[Unity app (apps/unity)]
   core[Core (@jarvis/core-agent)]
   rag[RAG (@jarvis/rag)]
@@ -30,7 +30,6 @@ graph TD
   models[Models (models/*)]
   tools[Tools (packages/sdk + tools)]
   assets[Assets (assets/*)]
-
   ui -->|RPC/events| core
   core --> rag
   core --> native
