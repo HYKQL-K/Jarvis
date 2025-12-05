@@ -1,8 +1,8 @@
-<h1 align="center">Jarvis Assistant Monorepo :sparkles:</h1>
+<h1 align="center">Jarvis Assistant Monorepo ✨</h1>
 [中文 README](README.md)
 
 ## Overview
-Lean voice/multimodal assistant repo: Unity app, native C/C++ layer, TypeScript packages, model manifests, and automation scripts. Bulky Unity TextMesh Pro demo assets and local model binaries are removed; only core scenes and code remain.
+Lean voice/multimodal assistant repo: Unity app, native C/C++ layer, TypeScript packages, model manifests, and automation scripts. Bulky Unity TextMesh Pro demos and local model binaries are removed; only core scenes and code remain.
 
 ## Recommended Environment
 - OS: Windows 10/11
@@ -20,6 +20,7 @@ Lean voice/multimodal assistant repo: Unity app, native C/C++ layer, TypeScript 
 - `assets/`, `configs/`, `scripts/`, `tests/`, `benchmarks/`, `.github/workflows/`
 
 ## Architecture
+
 ```mermaid
 graph TD
   ui[Unity app (apps/unity)]
@@ -70,6 +71,12 @@ graph TD
 - `models/` is ignored by git; no binaries are tracked.
 - Use the script to fetch models; if offline, download manually and keep filenames consistent with manifests.
 - Ensure manifests reference the exact filenames placed under `models/<name>/`.
+- Example placeholder URLs (replace with trusted mirrors):
+  - OpenWakeWord: `https://example.com/openwakeword/xiaobai.tflite`
+  - Faster-Whisper small-int8-zh: `https://example.com/faster-whisper/small-int8-zh.bin`
+  - Faster-Whisper medium-fp16-zh: `https://example.com/faster-whisper/medium-fp16-zh.bin`
+  - Piper Mandarin: `https://example.com/piper/mandarin.onnx`
+  - BGE-M3: `https://example.com/bge/bge-m3.onnx`
 
 ### Quick Command Cheatsheet
 ```bash
@@ -81,18 +88,18 @@ pnpm -C packages/core-agent test
 
 ### Tips & Notes
 <details>
-  <summary>pnpm not found / install issues :thinking:</summary>
+  <summary>pnpm not found / install issues 🤔</summary>
   Run <code>corepack prepare pnpm@latest --activate && corepack enable</code>, then <code>pnpm install</code>.
 </details>
 <details>
-  <summary>Unity version mismatch :gear:</summary>
+  <summary>Unity version mismatch ⚙️</summary>
   Check <code>apps/unity/ProjectSettings/ProjectVersion.txt</code> and open with that version via Unity Hub.
 </details>
 <details>
-  <summary>Model URLs are placeholders :link:</summary>
+  <summary>Model URLs are placeholders 🔗</summary>
   Replace the URLs in <code>scripts/get_models.sh</code> with working links or drop your own models into <code>models/</code> and update manifests.
 </details>
 <details>
-  <summary>Missing standard headers when building native :hammer:</summary>
+  <summary>Missing standard headers when building native 🔨</summary>
   Use the “x64 Native Tools Command Prompt for VS” to run cmake so MSVC env vars are set.
 </details>
