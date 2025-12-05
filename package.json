@@ -1,0 +1,15 @@
+{
+  "name": "jarvis-assistant",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Monorepo for Jarvis Assistant (apps, native modules, packages, models, assets, configs, and tooling).",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "native"
+  ],
+  "scripts": {
+    "postinstall": "echo \"postinstall: no extra workspace install step\""
+  }
+}

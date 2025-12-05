@@ -1,0 +1,9 @@
+{
+  "name": "open_app",
+  "version": "0.1.0",
+  "description": "Open system applications like calculator or browser",
+  "main": "index.ts",
+  "keywords": ["tool", "open_app", "jarvis"],
+  "author": "jarvis",
+  "license": "MIT"
+}

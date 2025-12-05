@@ -1,0 +1,9 @@
+{
+  "name": "local_search",
+  "version": "0.1.0",
+  "description": "Search local PDFs in assets/docs with embedding-based ranking and summarization",
+  "main": "index.ts",
+  "keywords": ["tool", "search", "pdf", "local"],
+  "author": "jarvis",
+  "license": "MIT"
+}

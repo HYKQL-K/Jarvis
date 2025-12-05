@@ -1,0 +1,22 @@
+{
+  "audio": {
+    "sample_rate": 16000,
+    "frame_ms": 20,
+    "vad": {
+      "threshold": 0.5
+    },
+    "wake": {
+      "sensitivity": 0.6
+    }
+  },
+  "asr": {
+    "model": "small-int8-zh"
+  },
+  "tts": {
+    "voice": "piper-mandarin",
+    "speed": 1.0
+  },
+  "privacy_mode": false,
+  "gesture_enabled": true,
+  "auto_close_seconds": 10
+}

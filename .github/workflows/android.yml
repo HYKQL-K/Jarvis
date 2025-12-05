@@ -1,0 +1,15 @@
+name: Android
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unity Builder (stub)
+        run: echo "Unity build would run here."
+      - name: Smoke
+        run: ./scripts/run_smoke_demo.sh

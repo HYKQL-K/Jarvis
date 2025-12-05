@@ -1,0 +1,14 @@
+{
+  "name": "@jarvis/rag",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./vectorstore.ts",
+  "exports": {
+    ".": "./vectorstore.ts",
+    "./embeddings": "./embeddings.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

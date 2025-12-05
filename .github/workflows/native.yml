@@ -1,0 +1,19 @@
+name: Native
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deps
+        run: sudo apt-get update && sudo apt-get install -y cmake ninja-build
+      - name: Configure
+        run: cmake -S native -B native/build -G Ninja -DJARVIS_AUDIO_USE_WEBRTC=OFF
+      - name: Build
+        run: cmake --build native/build
+      - name: Smoke
+        run: ./scripts/run_smoke_demo.sh
